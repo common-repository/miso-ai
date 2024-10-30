@@ -1,0 +1,21 @@
+{
+    "name": "miso/miso-sdk",
+    "description": "The official client library for Miso API",
+    "keywords": ["miso", "api", "sdk", "client", "library", "ai", "llm"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "simonpai",
+            "email": "simon.pai@miso.ai"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Miso\\": "src/"
+        }
+    }
+}

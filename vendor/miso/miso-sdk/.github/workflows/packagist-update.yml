@@ -1,0 +1,16 @@
+name: Packagist update
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  update-packagist:
+    environment: production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: mnavarrocarter/packagist-update@v1.0.0
+        with:
+          username: ${{ secrets.PACKAGIST_USERNAME }}
+          api_token: ${{ secrets.PACKAGIST_API_TOKEN }}
